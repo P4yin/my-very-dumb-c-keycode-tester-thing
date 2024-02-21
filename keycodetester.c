@@ -1,21 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
+#include <ncurses.h>
 
-int main()
+int main(void)
 {
-    for (;;)
-    {
+    initscr(); //determines where we are
+    cbreak();
+    noecho();
+    scrollok(stdscr, TRUE);
+    while (1) {
         int in1 = getch();
-        if (in1 == 0)
-        {
-            int in2 = getch();
-            printf("%d \n", in2);
+        if (in1 != ERR) {
+            printw("%d\n", in1); //formmatted print ensures text remains on the left
         }
-        else
-        {
-            printf("%d \n", in1);
-        }
+        refresh();
     }
-    return 0;
 }
