@@ -1,4 +1,4 @@
 # my-very-dumb-c-keycode-tester-thing
-Compile using Mingw. I don't believe this works on linux since it uses conio
+Program that provdes the keycode of the pressed key as output. Requires the ncurses dev tools, which can be installed using `sudo apt-get install libncurses-dev`
 
-gives keycodes using conio
+Compile using `gcc -o keycode keycode.c -lncurses`.
