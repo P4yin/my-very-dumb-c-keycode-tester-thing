@@ -1,4 +1,4 @@
 # my-very-dumb-c-keycode-tester-thing
-gives keycodes using conio
+Compile using Mingw. I don't believe this works on linux since it uses conio
 
-run it and press keys
+gives keycodes using conio
